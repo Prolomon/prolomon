@@ -17,7 +17,7 @@ export const Showcase = () => {
               About - Prolomon
             </h4>
             <p className="text-lg my-4">
-              My name is Prolomon, and my journey as a developer began with
+              My name is Taiwo Oyetade Solomon, and my journey as a developer began with
               curiosity that grew into a lasting drive to build systems that
               make sense, work efficiently, and stand the test of time. From the
               beginning, I was drawn to how logic and creativity merge in
