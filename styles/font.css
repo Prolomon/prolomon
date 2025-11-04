@@ -1,0 +1,8 @@
+@font-face {
+    font-family: 'space';
+    src: url('/fonts/Space-grotesk.ttf') format('truetype');
+}
+
+.font-space {
+    font-family: 'space', sans-serif;
+}
