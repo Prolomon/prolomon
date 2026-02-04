@@ -93,7 +93,7 @@ export const Showcase = () => {
 
         {/* Right Section */}
         <Avatar
-          src="/images/man.png"
+          src="/images/prolomon.png"
           className="mx-auto w-full md:w-[30rem] h-auto border-4 border-primary shadow-lg mb-4 aspect-square"
         />
       </div>
