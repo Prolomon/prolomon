@@ -37,7 +37,10 @@ export default function RootLayout({
 }) {
   return (
     <html suppressHydrationWarning lang="en">
-      <head />
+      <head>
+        <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet" />
+          <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+      </head>
       <body
         className={clsx(
           "text-foreground bg-black font-space antialiased",
@@ -47,10 +50,9 @@ export default function RootLayout({
         <Providers themeProps={{ attribute: "class", defaultTheme: "dark" }}>
           <div className="relative flex flex-col h-screen">
             <Navbar />
-            <main className="container mx-auto px-6 flex-grow mb-22">
+            <main className="flex-grow">
               {children}
             </main>
-            <Divider className="border-gray-500" />
             <Footer />
           </div>
         </Providers>
