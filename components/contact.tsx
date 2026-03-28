@@ -105,7 +105,7 @@ export function Contact() {
     };
 
     return (
-        <div className="w-full bg-black py-14 min-h-[60vh]" id="contact">
+        <section className="w-full bg-black py-14 min-h-[60vh]" id="contact">
             <div className="w-11/12 mx-auto">
                 <motion.div
                     initial={{ opacity: 0, y: 40 }}
@@ -320,6 +320,6 @@ export function Contact() {
                     </div>
                 </motion.div>
             </div>
-        </div>
+        </section>
     );
 }

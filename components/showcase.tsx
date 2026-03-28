@@ -16,7 +16,7 @@ export const Showcase = () => {
         backgroundSize: "cover",
         backgroundPosition: "center",
       }}
-      id="showcase"
+      id="home"
     >
       {/* Overlay */}
       <div className="absolute inset-0 bg-black/70"></div>

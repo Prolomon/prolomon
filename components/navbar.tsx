@@ -21,8 +21,34 @@ import { useEffect, useState } from "react";
 import { calendlyFunc } from "@/config/calendly";
 
 export const Navbar = () => {
-  const [hash, setHash] = useState("");
+  const [hash, setHash] = useState("#home");
   const [isFixed, setIsFixed] = useState(false);
+
+  const observeSections = () => {
+    const sections = document.querySelectorAll("section");
+    const navLinks = document.querySelectorAll(".nav_link");
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const visibleEntry = entries.find((entry) => entry.intersectionRect.height > 0);
+        if (visibleEntry) {
+          const sectionId = visibleEntry.target.id;
+          console.log("Visible section:", sectionId);
+          navLinks.forEach((link) => {
+            if (link.getAttribute("href")?.substring(1) === sectionId) {
+              setHash("#" + sectionId);
+            }
+          });
+        }
+      },
+      { threshold: 0.6 }
+    );
+
+    sections.forEach((section) => observer.observe(section));
+
+    return () => {
+      sections.forEach((section) => observer.unobserve(section));
+    };
+  }
 
   useEffect(() => {
     const handleScroll = () => {
@@ -31,6 +57,7 @@ export const Navbar = () => {
       } else {
         setIsFixed(false);
       }
+      observeSections();
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -102,7 +129,7 @@ export const Navbar = () => {
                 <NavbarItem>
                   <Button
                     className={clsx(
-                      "border-2 rounded-4xl py-2 px-4 text-base text-gray-300 transition-all duration-300 ease-in-out hover:border-primary hover:text-primary",
+                      "border-2 rounded-4xl py-2 px-4 text-base text-gray-300 transition-colors duration-500 ease-in-out hover:border-primary hover:text-primary nav_link",
                       {
                         "border-primary text-primary":
                           (hash).toString() === (item.href).toString(),
@@ -169,7 +196,7 @@ export const Navbar = () => {
               >
                 <NavbarMenuItem>
                   <Button
-                    className="border-2 border-transparent hover:border-primary text-sm  transition-colors ease-in-out duration-300 text-white"
+                    className="border-2 border-transparent hover:border-primary text-sm  transition-colors ease-in-out duration-500 text-white"
                     as={Link}
                     color="default"
                     variant="light"

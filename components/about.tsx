@@ -157,7 +157,7 @@ const StackCard = ({
 
 export function About() {
     return (
-        <div className="bg-black w-full py-10" id="about">
+        <section className="bg-black w-full py-10" id="about">
             <div className="mx-auto w-11/12 ">
                 <motion.div
                     className="relative flex flex-col items-center justify-center text-center py-16 mb-8 bg-gradient-to-b from-black via-gray-900 to-black rounded-2xl shadow-lg border border-gray-800"
@@ -308,7 +308,6 @@ export function About() {
                     </Card>
                 </motion.div>
             </div>
-
-        </div>
+        </section>
     );
 }
