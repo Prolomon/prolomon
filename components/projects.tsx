@@ -72,7 +72,7 @@ const projects: Project[] = [
             "MongoDB",
         ],
         image: "/images/collaborate.jpg",
-        href: "https://heca.netlify.app/",
+        href: "https://heca.com.ng/",
         status: "Live",
     },
     {
