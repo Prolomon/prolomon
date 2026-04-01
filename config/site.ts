@@ -1,5 +1,4 @@
 export type SiteConfig = typeof siteConfig;
-import {Twitter, Discord, Github, HeartFill, Instagram, Tiktok, Linkedin} from "react-bootstrap-icons"
 
 export const siteConfig = {
   name: "Prolomon",
@@ -7,23 +6,19 @@ export const siteConfig = {
   navItems: [
     {
       label: "Home",
-      href: "/",
+      href: "#home",
     },
     {
       label: "About",
-      href: "/about",
+      href: "#about",
     },
     {
-      label: "Project",
-      href: "/project",
-    },
-    {
-      label: "Service",
-      href: "/service",
+      label: "Projects",
+      href: "#projects",
     },
     {
       label: "Contact",
-      href: "/contact",
+      href: "#contact",
     },
   ],
   navMenuItems: [

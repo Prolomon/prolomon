@@ -1,15 +1,15 @@
-import { Game } from "./_components/game";
-import { ReviewsSection } from "./_components/reviews";
-import { Showcase } from "./_components/showcase";
-import { QuoteCard } from "./_components/quote";
+import { Showcase } from "../../components/showcase";
+import { About } from "@/components/about";
+import { Project } from "@/components/projects";
+import { Contact } from "@/components/contact";
 
 export default function Home() {
   return (
     <main>
       <Showcase />
-      {/* <ReviewsSection /> */}
-      <Game />
-      <QuoteCard />
+      <About />
+      <Project />
+      <Contact />
     </main>
   );
 }
