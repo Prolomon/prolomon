@@ -2,7 +2,7 @@ name: audit-dependencies
 run-name: ${{ github.actor }} is auditing dependencies
 on: [push]
 jobs:
-  check-bats-version:
+  check-for-vulnerability:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v6
