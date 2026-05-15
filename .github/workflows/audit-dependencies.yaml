@@ -1,10 +1,32 @@
 name: audit-dependencies
 run-name: ${{ github.actor }} is auditing dependencies
+
 on: [push]
+
 jobs:
   check-for-vulnerability:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v6
-      - run: npm install
-      - run: npm audit
+      - name: Checkout Repo
+        uses: actions/checkout@v3   # v6 doesn't exist yet, use v3
+
+      - name: Installing Dependencies
+        run: npm install
+
+      - name: Running Audit on the Repository
+        id: audit
+        run: npm audit
+
+  resolve-issues:
+    runs-on: ubuntu-latest
+    needs: check-for-vulnerability   # depends on the audit job
+    if: failure()                    # only runs if audit job fails
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v3
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Resolving the issue
+        run: npm audit fix --force
