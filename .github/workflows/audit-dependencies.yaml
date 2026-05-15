@@ -1,0 +1,10 @@
+name: audit-dependencies
+run-name: ${{ github.actor }} is auditing dependencies
+on: [push]
+jobs:
+  check-bats-version:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - run: npm install
+      - run: npm audit
