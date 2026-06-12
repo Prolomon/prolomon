@@ -1,5 +1,5 @@
 # 💫 About Me:
-I'm Prolomon, a full-stack developer passionate about building clean, performant, and modern web applications. I specialize in creating dynamic UIs using React.js, Next.js, and managing scalable backends with Node.js & MongoDB.<br><br>I help startups and teams transform ideas into working MVPs, build modern dashboards, and ship scalable digital products. When I'm not coding, I'm sketching UI layouts, recording tech content, or contributing to open-source projects.
+I'm Prolomon, a full-stack developer passionate about building clean, performant, and modern web applications. I specialize in creating dynamic UIs using React.js, Next.js, and managing scalable backends with Node.js & MongoDB.<br><br>I help startups and teams transform ideas into working MVPs, build modern dashboards, and ship scalable digital products. When I'm not coding, I'm sketching UI layouts, or researching on my next projects.
 
 
 ## 🌐 Socials:
